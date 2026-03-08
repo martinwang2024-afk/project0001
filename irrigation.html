@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irrigation / Water Requirement Calculator | Quantity + Price Estimator (Metric/Imperial)</title>
+  <meta name="description" content="Estimate irrigation water quantity and cost. Switch Metric/Imperial units, choose USA/Canada/UK/Australia pricing, and get instant quantity + cost breakdown." />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Irrigation / Water Requirement Calculator","description":"Estimate irrigation water quantity and cost.","applicationCategory":"Construction Tool","operatingSystem":"Web"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does this calculator estimate quantity?","acceptedAnswer":{"@type":"Answer","text":"Enter your dimensions and rates, and the calculator applies standard construction formulas instantly."}},{"@type":"Question","name":"How is price estimated?","acceptedAnswer":{"@type":"Answer","text":"The tool multiplies material quantity by a country-adjusted USD unit price for a fast budget view."}},{"@type":"Question","name":"Can I switch between Metric and Imperial?","acceptedAnswer":{"@type":"Answer","text":"Yes. Unit selector toggles metric/imperial input interpretation and output display without reloading."}},{"@type":"Question","name":"Are these prices exact?","acceptedAnswer":{"@type":"Answer","text":"No. Prices are approximate planning values and vary by supplier, region, and project conditions."}}]}]}</script>
+</head>
+<body data-tool="irrigation">
+  <header class="site-header"><div class="inner"><h1>Irrigation / Water Requirement Calculator</h1><p>Estimate irrigation water quantity and cost.</p></div></header>
+  <main class="page-wrap">
+    <aside class="ad-space">Ad Space</aside>
+    <section>
+      <article class="card">
+        <a class="button-link" href="index.html">← Back to all tools</a>
+        <h2>Inputs</h2>
+        <div class="controls-grid">
+          <label>Unit System
+            <select id="unitSelect"><option value="metric">Metric</option><option value="imperial">Imperial</option></select>
+          </label>
+          <label>Country
+            <select id="countrySelect"><option>USA</option><option>Canada</option><option>UK</option><option>Australia</option></select>
+          </label>
+        </div>
+        <div id="inputGrid" class="input-grid"></div>
+      </article>
+
+      <article class="card">
+        <h2>Quantity Results</h2>
+        <p class="result-num">Dynamic calculation updates on every input change.</p>
+        <table><thead><tr><th>Metric</th><th>Value</th><th>Unit</th></tr></thead><tbody id="quantityBody"></tbody></table>
+      </article>
+
+      <article class="card">
+        <h2>Budget Calculator (Per Tool)</h2>
+        <table>
+          <thead><tr><th>Material</th><th>Quantity</th><th>Unit Price (USD)</th><th>Line Total (USD)</th></tr></thead>
+          <tbody id="costBody"></tbody>
+          <tfoot><tr><td colspan="3">Total Estimated Material Cost</td><td id="totalCost">$0.00</td></tr></tfoot>
+        </table>
+        <p class="disclaimer">Prices are approximate. Actual costs may vary by location and supplier.</p>
+      </article>
+
+      <article class="card">
+        <h2>Step-by-Step Example</h2>
+        <ol>
+          <li>Select Metric or Imperial units.</li>
+          <li>Enter project values in the input fields.</li>
+          <li>Review quantity table and material cost breakdown with country-adjusted prices.</li>
+        </ol>
+        <p><strong>Example:</strong> Enter default inputs to see immediate quantity and budget output without reloading.</p>
+      </article>
+
+      <article class="card faq">
+        <h2>FAQ</h2>
+        <details><summary>How does this calculator estimate quantity?</summary><p>Enter your dimensions and rates, and the calculator applies standard construction formulas instantly.</p></details>
+<details><summary>How is price estimated?</summary><p>The tool multiplies material quantity by a country-adjusted USD unit price for a fast budget view.</p></details>
+<details><summary>Can I switch between Metric and Imperial?</summary><p>Yes. Unit selector toggles metric/imperial input interpretation and output display without reloading.</p></details>
+<details><summary>Are these prices exact?</summary><p>No. Prices are approximate planning values and vary by supplier, region, and project conditions.</p></details>
+      </article>
+
+      <section class="ad-bottom">Bottom Ad Space</section>
+    </section>
+    <aside class="ad-space">Ad Space</aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
